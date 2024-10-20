@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yedida Aravind Kumar's Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home">Y.Aravind Kumar </a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#linktree">Connections</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="home-section">
+        <h1>Welcome To</h1>
+        <h1>aravind-kumar.tech</h1>
+        <p>👋Hello I am Aravind Kumar Yedida</p>
+        <p>Aspiring Data Analyst | Actively Learning Python, SQL, and Data Visualization</p> 
+    </section>
+
+    
+
+        
+            <section id="about" class="section about-section">
+                <h2>About Me</h2>
+                <p>I have completed my Master’s in Computer Science from Andhra University and I am currently pursuing a career in data analytics.</p>
+                <p>With a strong passion for technology and solving real-world problems, I am actively developing skills in Python, SQL, and data visualization through courses on platforms like Coursera and edX.</p>
+                <p>I am eager to apply my analytical skills to derive actionable insights from data and drive impactful business decisions.</p>
+                <p>I have a keen interest in learning and understanding technology.</p>
+            </section>
+
+            <section id="linktree" class="section linktree-section">
+                <h2>Linktree</h2>
+                <p>Connect with me:</p>
+                <div class="linktree-buttons">
+                    <a href="portfolio.html" target="_blank"class="linktree-button">📁 My Portfolio</a>
+                    <a href="https://yaravind007.medium.com/"target="_blank" class="linktree-button">📝 Medium</a>
+                    <a href="https://www.linkedin.com/in/yaravindkumar/"target="_blank" class="linktree-button">🌐 LinkedIn</a>
+                    <a href="https://github.com/yaravind007"target="_blank" class="linktree-button">🐱 GitHub</a>
+                </div>
+            </section>
+            
+        </div>
+        
+<!-- Contact Section -->
+<section id="contact" class="section contact-section">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Me</h2>
+            <p>
+                <a href="mailto:yaravind2001@gmail.com">yaravind2001@gmail.com</a>
+            </p>
+            <p>
+                <a href="tel:+916303259395">6303259395</a>
+            </p>
+            <div class="social-media">
+                <a href="https://x.com/aravindk_007" target="_blank">Twitter</a>
+                <a href="https://www.linkedin.com/in/yaravindkumar/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        
+        <form name="submit-to-google-sheet" id="contact-form">
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="Email" placeholder="Your Email" required>
+            <textarea name="Message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <span id="msg"></span>
+</section>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxnaq5LZF9fcbHN2D4peeHMz77CP3FsGw55GUO7vmEe6hORcdx7bwWVPZ3eDufeBRE5cg/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg= document.getElementById("msg")
+          
+             form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+               
+                alert("Message sent successfully");
+
+                form.reset();
+            })
+            .catch(error => alert('Error! ' + error.message));
+    });
+</script>
+            <span id="msg"></span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aravind Kumar Yedida. All rights reserved.</p>
+    </footer>
+</body>
+</html>
